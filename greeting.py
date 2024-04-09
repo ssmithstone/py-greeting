@@ -1,5 +1,6 @@
 def main():
-    print("Hello, world!")
+    name = "Luke Skywalker"
+    print(f"Hello, {name}!")
 
 
 if __name__ == '__main__':
