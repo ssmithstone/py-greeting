@@ -1,5 +1,8 @@
+import sys
+
+
 def main():
-    name = "Luke Skywalker"
+    name = sys.argv[1] if len(sys.argv) > 1 else "Luke Skywalker"
     print(f"Hello, {name}!")
 
 
