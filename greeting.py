@@ -3,9 +3,15 @@ from datetime import datetime
 
 
 def main():
-    name = sys.argv[1] if len(sys.argv) > 1 else "Luke Skywalker"
-    print(f"Hello, {name}!")
+    print_greeting()
     print_current_time()
+
+
+def print_greeting():
+    name = sys.argv[1] if len(sys.argv) > 1 else "[Luke Skywalker]"
+    hour = datetime.now().hour
+    greeting = "morning" if hour in range(0, 12) else "afternoon" if hour in range(12, 18) else "evening"
+    print(f"Good {greeting}, {name}!")
 
 
 def print_current_time():
